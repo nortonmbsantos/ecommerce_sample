@@ -31,6 +31,9 @@ gem 'jquery-rails'
 
 gem 'sprockets-rails', :require => 'sprockets/railtie'
 
+gem "bootstrap_flash_messages", "~> 1.0.1"
+
+gem 'carrierwave', '~> 1.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

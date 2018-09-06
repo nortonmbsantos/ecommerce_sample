@@ -1,8 +1,8 @@
 class Admin::CategoriesController < ApplicationController
-  before_action :set_category, only: [:show, :edit, :update, :destroy]
-
-
-
+	
+	layout 'dashboard_layout'
+	before_action :set_category, only: [:show, :edit, :update, :destroy]
+	
 def index
 	@categories = Admin::Category.all
 end
@@ -23,7 +23,7 @@ end
 
 def destroy
   @category.destroy
-  redirect_to categories_path
+  redirect_to admin_categories_path
 end
 
 private 

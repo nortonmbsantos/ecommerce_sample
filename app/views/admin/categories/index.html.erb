@@ -12,8 +12,10 @@
 <tr>
 <td><%= c.name %></td>
 <td>
-<%= link_to 'Destroy', c, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger float-right' %>
-<%= link_to 'Edit', edit_admin_category_path(c), class: 'btn btn-success float-right' %>
+<div class="btn-group float-right" role="group" aria-label="Basic example">
+  <%= link_to 'Edit', edit_admin_category_path(c), class: 'btn btn-success float-right' %>
+  <%= link_to 'Destroy', c, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger float-right' %>
+</div>
 </td>
 </tr>
 <% end %>

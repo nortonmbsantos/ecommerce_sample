@@ -1,0 +1,25 @@
+<%= simple_form_for @product do |p| %>
+  <div class= 'row'>
+    <div class='col-12'>
+      <%= p.input :name %>
+    </div>
+    <div class='col-12'>
+      <%= p.input :quantity %>
+    </div>
+    <div class='col-12'>
+      <%= p.input :price %>
+    </div>
+    <div class='col-12 margin-bottom'>
+      <%= p.select(:admin_category_id, @categories.collect { |c| [c.name, c.id] }, {}, { :class => 'custom-select' }) %>
+    </div>
+    <div class='col-12 margin-bottom'>
+      <%= p.file_field :photos, multiple: true  %>
+    </div>
+    <div class='col-12 margin-bottom'>
+      <div class="btn-group" role="group" aria-label="Basic example">
+        <%= link_to 'Back', admin_categories_path, class: 'btn btn-danger' %>
+        <%= p.button :submit, class: 'btn btn-success' %>
+      </div>
+    </div>
+  </div>
+<% end %>
